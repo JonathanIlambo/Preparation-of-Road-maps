@@ -1,15 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/***********************************************************************
+ * Module:  Entrepot.java
+ * Author:  Jonathan Ilambo
+ ***********************************************************************/
 
 package model;
 
-/**
- *
- * @author Jonathan Ilambo
- */
-public class Entrepot {
-    
+import java.util.Date;
+
+
+public class Entrepot extends PointItineraire {
+	
+	private Date heureRetour;
+	
+	public Entrepot() {
+	
+	}
+
+	/**
+	 * 
+	 * @return Retourne l'heure de retour prevue à l'entrepot, apres avoir effectue la tournee.
+	 */
+	public Date getHeureRetour() {
+		return heureRetour;
+	}
+
+	/**
+	 * Affecte une heure de retour e l'entrepot pour la tournee.
+	 * @param heureRetour heure de retour prevue à l'entrepot
+	 */
+	public void setHeureRetour(Date heureRetour) {
+		this.heureRetour = heureRetour;
+	}
+	
+	
+
 }
