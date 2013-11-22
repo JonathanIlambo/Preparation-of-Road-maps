@@ -18,15 +18,15 @@ public class Entrepot extends PointItineraire {
 
 	/**
 	 * 
-	 * @return Retourne l'heure de retour prevue à l'entrepot, apres avoir effectue la tournee.
+	 * @return the hour of return planned in the warehouse, having make the tour
 	 */
 	public Date getHeureRetour() {
 		return heureRetour;
 	}
 
 	/**
-	 * Affecte une heure de retour e l'entrepot pour la tournee.
-	 * @param heureRetour heure de retour prevue à l'entrepot
+	 * Affect one hour of return e the warehouse for the tour.
+	 * @param heureRetour The hour of return planned in the warehouse
 	 */
 	public void setHeureRetour(Date heureRetour) {
 		this.heureRetour = heureRetour;
