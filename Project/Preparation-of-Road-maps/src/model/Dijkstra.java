@@ -10,13 +10,13 @@ public class Dijkstra {
 	
 	
 	/**
-	 * Applique l'agorithme de Djikstraa a un ensemble de points, et retourne la liste des couples (chemin, poids)
-	 * de chaque plus court chemin vers les points d'arrivee spécifies.
-	 * @param ensNoeuds liste des identifiants des points du graphe
-	 * @param distance tableau des distances entre les differents points du graphe
-	 * @param debut identifiant du point de depart de l'algorithme
-	 * @param fin liste des identifiants des points d'arrivee vers lesquels calculer les chemins
-	 * @return Retourne la liste des couples (chemin, poids) calcules, un chemin etant une liste ordonne d'identifiants de points du graphe
+	 * Apply the algorithm of Djikstraa has a set of points, and returns the list of the couples (pathway, weight)
+	 * Of every shorter pathway towards places of destination specify.
+	 * @param ensNoeuds List of the identifiers of the points of the graph
+	 * @param distance Board of the distances between the various points of the graph
+	 * @param debut Identifier of the point of depart of the algorithm
+	 * @param fin List of the identifiers of the places of destination towards which to calculate pathways
+	 * @return The list of the couples (pathway, weight) calculate, an etant path(way) a list orders of identifiers of points of the graph
 	 */
 	public  ArrayList<ArrayList<ArrayList<Integer>>> algoDijkstra(ArrayList<Integer> ensNoeuds, int[][] distance, int debut, ArrayList<Integer> fin)
 	{
@@ -36,7 +36,7 @@ public class Dijkstra {
 		parcourus[debut] = 0;
 		
 		
-		// Recherche des plus courts chemin Ã  partir de debut
+		// Search of the shortest pathway Ã leave from the beginning
 		while(!noeuds.isEmpty())
 		{
 			int enCours=-1;
@@ -52,10 +52,10 @@ public class Dijkstra {
 				}
 			}
 			
-			// On retire suivant Ã  noeuds
+			// We remove following in nodes
 			noeuds.remove(noeuds.indexOf(enCours));
 			
-			// On parcourt ses successeurs
+			// We browse its successors
 			for(int successeur=0; successeur< nbPoints; successeur++)
 			{
 				if (distance[enCours][successeur] != -1)
@@ -74,7 +74,7 @@ public class Dijkstra {
 			}
 		}
 		
-		// GÃ©nÃ©ration du plus court chemin entre debut et fin
+		// Generation of the shortest pathway between the beginning and the end
 		int compteur = 0;
 		while( compteur < fin.size())
 		{	
