@@ -12,7 +12,7 @@ public class Chemin {
    
    private PointItineraire destination;
    private PointItineraire depart;
-   private java.util.ArrayList<Section> troncons;
+   private ArrayList<Section> troncons;
    
    
 	public Chemin(PointItineraire depart, PointItineraire destination, ArrayList<Section> troncons, int duree) {
@@ -24,7 +24,7 @@ public class Chemin {
 
 	/**
 	 * 
-	 * @return Retourne le point d'arrivee du chemin.
+	 * @return The place of destination of the pathway.
 	 */
 	public PointItineraire getDestination(){
 		return destination;
@@ -32,7 +32,7 @@ public class Chemin {
 
 	/**
 	 * 
-	 * @return Retourne le point de depart du chemin.
+	 * @return the point of depart of the pathway
 	 */
 	public PointItineraire getDepart(){
 		return depart;
@@ -40,7 +40,7 @@ public class Chemin {
 	
 	/**
 	 * 
-	 * @return Retourne la duree en secondes necessaire pour traverser le chemin.
+	 * @return the necessary duration in seconds to cross the pathway
 	 */
 	public int getDuree(){
 		return duree;
@@ -48,7 +48,7 @@ public class Chemin {
 	
 	/**
 	 * 
-	 * @return Retourne la liste ordonnee des troncons constituant le chemin.
+	 * @return The order list of sections constituting the pathway
 	 */
 	public ArrayList<Section> getTroncons(){
 		return troncons;
