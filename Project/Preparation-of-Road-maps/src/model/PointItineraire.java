@@ -26,66 +26,64 @@ public Intersection getIntersection() {
 }
 
 /**
- * Calcule les plus courts chemins vers des points donnees.
- * @param intersections liste des intersections du graphe
- * @param pointsDestination liste des points d'itineraire vers lesquels calculer les differents chemins
- * @param distance tableau des distances entre les intersections
- * @return Retourne la liste des couples (chemin, duree), un chemin etant une liste ordonnee d'identifiants de points d'itineraire, et duree s'exprimant en secondes
+ * Calculate the shortest pathways towards points data.
+ * @param intersections List of the intersections of the graph
+ * @param pointsDestination List of the points of route towards which to calculate the various pathways
+ * @param distance Board of the distances between the intersections
+ * @return The list of the couples (pathway, duration), a pathway being an orderly list of identifiers of points of route, and duration expressing itself in seconds
  */
    public ArrayList<ArrayList<ArrayList<Integer>>> calculerPlusCourtCheminVers(ArrayList<Intersection> intersections, ArrayList<PointItineraire> pointsDestination, int[][] distance) 
    {
-	   // Création de l'arraylist noeuds
+	   // Creation of the arraylist nodes
 	   ArrayList<Integer> noeuds = new ArrayList<Integer>();
 	   for (int i = 0; i < intersections.size() ; i++ )
 	   {
 		   noeuds.add(intersections.get(i).getId());
 	   }
 	   
-	   // Récupération de l'id du point de départ
+	   // Recovery of id of the starting point
 	   int debut = this.getIntersection().getId();
 	   
-	   // Création de la liste des id des points de destination
+	   // Creation of the list of id of places of destination
 	   ArrayList<Integer> fin = new ArrayList<Integer>();
 	   for (int i = 0; i < pointsDestination.size() ; i++ )
 	   {
 		   fin.add(pointsDestination.get(i).getIntersection().getId());
 	   } 
 	   
-	   // Appel de la fonction Dijkstra
+	   // Call of the function Dijkstra
 	   Dijkstra d = new Dijkstra();
 	   
 	   return d.algoDijkstra(noeuds, distance, debut,fin);
 
    }
 
-public int getId() {
-	return id;
-}
+    public int getId() {
+            return id;
+    }
 
-public void setId(int id) {
-	this.id = id;
-}
+    public void setId(int id) {
+            this.id = id;
+    }
 
-public Date getHeurePassage() {
-	return heurePassage;
-}
+    public Date getHeurePassage() {
+            return heurePassage;
+    }
 
-public void setHeurePassage(Date heurePassage) {
-	this.heurePassage = heurePassage;
-}
+    public void setHeurePassage(Date heurePassage) {
+            this.heurePassage = heurePassage;
+    }
 
-public PlageHoraire getPlageHoraire() {
-	return plageHoraire;
-}
+    public PlageHoraire getPlageHoraire() {
+            return plageHoraire;
+    }
 
-public void setPlageHoraire(PlageHoraire plageHoraire) {
-	this.plageHoraire = plageHoraire;
-}
+    public void setPlageHoraire(PlageHoraire plageHoraire) {
+            this.plageHoraire = plageHoraire;
+    }
 
-public void setIntersection(Intersection intersection) {
-	this.intersection = intersection;
-}
-   
-   
+    public void setIntersection(Intersection intersection) {
+            this.intersection = intersection;
+    }     
 
 }

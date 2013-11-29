@@ -1,5 +1,5 @@
 /***********************************************************************
- * Module:  AbstractModel.java
+ * Module:  GenFdRCmd_SuppressionDansTournee.java
  * Author:  Jonathan Ilambo
  ***********************************************************************/
 

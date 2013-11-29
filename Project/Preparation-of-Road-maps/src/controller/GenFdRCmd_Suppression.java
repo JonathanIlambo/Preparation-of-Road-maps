@@ -1,5 +1,5 @@
 /***********************************************************************
- * Module:  AbstractModel.java
+ * Module:  GenFdRCmd_Suppression.java
  * Author:  Jonathan Ilambo
  ***********************************************************************/
 

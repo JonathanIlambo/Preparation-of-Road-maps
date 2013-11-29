@@ -107,8 +107,7 @@ public class FeuilleDeRoute extends AbstractModel {
    {
 	   logger.log(Level.INFO,"DEBUT DU CHARGEMENT DES PLAGES HORAIRES");
 	   if (ouvertureFichier() == true)
-	   {
-		   
+	   {		   
 		   String tag = "Reseau"; 
 		   try
 		   {
