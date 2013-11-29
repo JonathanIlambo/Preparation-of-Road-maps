@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/***********************************************************************
+ * Module:  Launcher.java
+ * Author:  Jonathan Ilambo
+ ***********************************************************************/
 
 package controller;
 
@@ -15,8 +14,8 @@ package controller;
 
 public class Launcher {
 
-	/** Point d'entree du programme, lance l'application
-	 * @param args parametre standard du main
+	/** 
+	 * @param args standard parameter of main
 	 */
 	public static void main(String[] args) {
 		new FenetrePrincipale();
