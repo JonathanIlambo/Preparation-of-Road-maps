@@ -1,46 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/***********************************************************************
+ * Module:  ZoneGeoTest.java
+ * Author:  Jonathan Ilambo
+ ***********************************************************************/
 
 package model;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Jonathan Ilambo
- */
-public class ZoneGeoTest {
-    
-    public ZoneGeoTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+import java.io.File;
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+import org.junit.Test;
+
+public class ZoneGeoTest {
+
+	@Test
+	public void testGenererZoneGeo() {
+		ZoneGeo zoneGeo = new ZoneGeo(); 
+		String chemin = "files/test/plan1.xml";
+		File file = new File(chemin);
+		zoneGeo.setXml(file);
+		assertEquals("Result",AbstractModel.OK,zoneGeo.genererZoneGeo());
+	}
 }
