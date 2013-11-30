@@ -1,46 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package model;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Jonathan Ilambo
- */
-public class IntersectionTest {
-    
-    public IntersectionTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+import org.junit.Test;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+public class IntersectionTest {
+
+	@SuppressWarnings("static-access")
+	@Test
+	public void testGenererIntersection() {
+		Map<Section,Integer> tronconIdDestination = new HashMap<Section,Integer>();
+		ZoneGeo zoneGeo = new ZoneGeo(); 
+		String chemin = "files/test/plan1.xml";
+		File file = new File(chemin);
+		zoneGeo.setXml(file);
+		zoneGeo.genererZoneGeo();
+		
+		// Take root
+		Element racine = zoneGeo.getDocument().getDocumentElement();
+		
+		String tag="Noeud"; 
+		NodeList noeuds = racine.getElementsByTagName(tag);
+		
+		for (int i=0 ; i <noeuds.getLength() ; i++)
+		{ 
+			Element intersectionElement = (Element) noeuds.item(i);
+			
+			Intersection intersection = new Intersection();
+			
+			assertEquals("Result",AbstractModel.OK,intersection.genererIntersection(intersectionElement,tronconIdDestination));
+		}
+	}
+
 }
