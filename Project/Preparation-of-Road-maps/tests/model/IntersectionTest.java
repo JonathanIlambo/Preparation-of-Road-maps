@@ -37,5 +37,4 @@ public class IntersectionTest {
 			assertEquals("Result",AbstractModel.OK,intersection.genererIntersection(intersectionElement,tronconIdDestination));
 		}
 	}
-
 }
