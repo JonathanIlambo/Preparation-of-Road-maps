@@ -1,5 +1,5 @@
 /***********************************************************************
- * Module:  Section.java
+ * Module:  Troncon.java
  * Author:  Jonathan Ilambo
  ***********************************************************************/
 
@@ -11,12 +11,12 @@ import java.util.logging.Logger;
 
 import org.w3c.dom.Element;
 
-public class Section extends Observable {
+public class Troncon extends Observable {
 	
 	/** Attribute */
-	private String street; 
-	private Integer speed; 
-	private Integer length; 
+	private String rue; 
+	private Integer vitesse; 
+	private Integer longueur; 
 	private Intersection destination;
 	private Intersection depart;
 	private boolean cheminLivraison = false; 
@@ -32,45 +32,45 @@ public class Section extends Observable {
 	}
 	/**
 	 * 
-	 * @return Name of the street has which one belongs the section
+	 * @return Name of the rue has which one belongs the section
 	 */
-	public String getStreet() {
-		return street;
+	public String getRue() {
+		return rue;
 	}
 	/**
-	 * Allocate a street name to the section
-	 * @param street nom de la street
+	 * Allocate a rue name to the section
+	 * @param street nom de la rue
 	 */
-	public void setStreet(String street) {
+	public void setRue(String street) {
 		street = street;
 	}
 	/**
 	 * 
-	 * @return Limit of speed of the section 
+	 * @return Limit of vitesse of the section 
 	 */
-	public int getSpeed() {
-		return speed;
+	public int getVitesse() {
+		return vitesse;
 	}
 	/**
-	 * Allocate the limit of speed to the section
-	 * @param speed
+	 * Allocate the limit of vitesse to the section
+	 * @param vitesse
 	 */
-	public void setSpeed(Integer speed) {
-		this.speed = speed;
+	public void setVitesse(Integer vitesse) {
+		this.vitesse = vitesse;
 	}
 	/**
 	 * 
-	 * @return The Section of the section
+	 * @return The Troncon of the section
 	 */
-	public Integer getLength() {
-		return length;
+	public Integer getLongueur() {
+		return longueur;
 	}
 	/**
-	 * Affect the Section of the section
-	 * @param length
+	 * Affect the Troncon of the section
+	 * @param longueur
 	 */
-	public void setLength(int length) {
-		this.length = length;
+	public void setLongueur(int longueur) {
+		this.longueur = longueur;
 	}
 	/**
 	 * 
@@ -120,16 +120,16 @@ public class Section extends Observable {
 		try
 		{
 			/** Recovery of the attributes d an intersection */
-			street = tronconElement.getAttribute("nomRue");
-			length = Integer.parseInt(tronconElement.getAttribute("longueur"));
-			if (length < 0)
+			rue = tronconElement.getAttribute("nomRue");
+			longueur = Integer.parseInt(tronconElement.getAttribute("longueur"));
+			if (longueur < 0)
 			{
 				ZoneGeo.message = "Fichier incorrect, Longueur Negative";
 				logger.log(Level.SEVERE,ZoneGeo.message);
 				return idDestination;
 			}
-			speed = Integer.parseInt(tronconElement.getAttribute("vitesse"));
-			if ((speed < 0) || (speed == 0 && length >0))
+			vitesse = Integer.parseInt(tronconElement.getAttribute("vitesse"));
+			if ((vitesse < 0) || (vitesse == 0 && longueur >0))
 			{
 				ZoneGeo.message = "Fichier incorrect, Vitesse Negative OU Nulle";
 				logger.log(Level.SEVERE,ZoneGeo.message);
@@ -160,13 +160,13 @@ public class Section extends Observable {
 	 */
 	public int duration ()
 	{
-		if ( this.speed > 0)
+		if ( this.vitesse > 0)
 		{
-			return (this.length)/(this.speed) ;
+			return (this.longueur)/(this.vitesse) ;
 		}
 		else
 		{
-			if ( this.length == 0 && this.speed == 0)
+			if ( this.longueur == 0 && this.vitesse == 0)
 				return 0; 
 
 			return -1; 

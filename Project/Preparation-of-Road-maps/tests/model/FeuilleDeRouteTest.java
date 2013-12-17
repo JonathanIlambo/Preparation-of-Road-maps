@@ -1,46 +1,100 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package model;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Jonathan Ilambo
- */
-public class FeuilleDeRouteTest {
-    
-    public FeuilleDeRouteTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+import java.io.File;
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+import org.junit.Test;
+
+public class FeuilleDeRouteTest {	
+
+	@Test
+	public void testCreerZone() {
+		String cheminPlan = "files/test/plan1.xml"; 
+		File file = new File(cheminPlan); 
+		FeuilleDeRoute feuilleDeRoute = new FeuilleDeRoute(file);
+		
+		assertEquals("Result",AbstractModel.OK,feuilleDeRoute.creerZone(file)); 
+	}
+	
+	@SuppressWarnings("static-access")
+	@Test
+	public void testViderZone() {
+		
+		/** Plages Horaires */
+		String cheminPlan = "files/test/plagesHoraires.xml"; 
+		File file1 = new File(cheminPlan); 
+		FeuilleDeRoute feuilleDeRoute = new FeuilleDeRoute(file1);
+		
+		/** Zone Geographique */ 
+		cheminPlan = "files/test/plan1.xml";
+		File file2 = new File(cheminPlan);
+		feuilleDeRoute.setXml(file2); 
+		feuilleDeRoute.creerZone(file2);
+		
+		/** Vider livraison */ 
+		feuilleDeRoute.viderZone(); 
+		
+		assertEquals("Result",null,feuilleDeRoute.getZoneGeo()); 		
+	}
+	
+	@SuppressWarnings("static-access")
+	@Test
+	public void testGenererFeuille() {
+		
+		/** Plages Horaires */
+		String cheminPlan = "files/test/plagesHoraires.xml"; 
+		File file1 = new File(cheminPlan); 
+		FeuilleDeRoute feuilleDeRoute = new FeuilleDeRoute(file1);
+		feuilleDeRoute.genererPlagesHoraires(); 
+		
+		/** Zone Geographique */ 
+		cheminPlan = "files/test/plan1.xml";
+		File file2 = new File(cheminPlan);
+		feuilleDeRoute.setXml(file2); 
+		feuilleDeRoute.creerZone(file2);
+		
+		/** Generer Feuille de route */
+		assertEquals("Result",AbstractModel.ERR,feuilleDeRoute.genererFeuille());		
+	}
+
+	@SuppressWarnings("static-access")
+	@Test
+	public void testIntersectionIsLivraison() {
+		/** Plages Horaires */
+		String cheminPlan = "files/test/plagesHoraires.xml"; 
+		File file1 = new File(cheminPlan); 
+		FeuilleDeRoute feuilleDeRoute = new FeuilleDeRoute(file1);
+		
+		/** Zone Geographique */ 
+		cheminPlan = "files/test/plan1.xml";
+		File file2 = new File(cheminPlan);
+		feuilleDeRoute.setXml(file2); 
+		feuilleDeRoute.creerZone(file2);
+		
+		/** Generer Feuille de route */
+		feuilleDeRoute.genererFeuille();
+		
+		assertEquals("Result",false,feuilleDeRoute.intersectionIsLivraison(0)); 		
+	}
+
+	@SuppressWarnings("static-access")
+	@Test
+	public void testIntersectionIsEntrepot() {
+		/** Plages Horaires */
+		String cheminPlan = "files/test/plagesHoraires.xml"; 
+		File file1 = new File(cheminPlan); 
+		FeuilleDeRoute feuilleDeRoute = new FeuilleDeRoute(file1);
+		
+		/** Zone Geographique */ 
+		cheminPlan = "files/test/plan1.xml";
+		File file2 = new File(cheminPlan);
+		feuilleDeRoute.setXml(file2); 
+		feuilleDeRoute.creerZone(file2);
+		
+		/** Generer Feuille de route */
+		feuilleDeRoute.genererFeuille();
+		
+		assertEquals("Result",true,feuilleDeRoute.intersectionIsEntrepot(0)); 		
+	}
 }

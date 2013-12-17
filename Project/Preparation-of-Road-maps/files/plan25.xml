@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Reseau>
+<Entrepot id="16"/>
+<Noeuds>
+<Noeud x="213" y="106" id="0">
+<TronconSortant nomRue="v0" destination="1" vitesse="46" longueur="16888"/>
+<TronconSortant nomRue="h0" destination="5" vitesse="42" longueur="14268"/>
+</Noeud>
+<Noeud x="121" y="296" id="1">
+<TronconSortant nomRue="v0" destination="0" vitesse="46" longueur="16888"/>
+<TronconSortant nomRue="v0" destination="2" vitesse="41" longueur="8595"/>
+<TronconSortant nomRue="h1" destination="6" vitesse="45" longueur="10560"/>
+</Noeud>
+<Noeud x="94" y="400" id="2">
+<TronconSortant nomRue="v0" destination="1" vitesse="41" longueur="8595"/>
+<TronconSortant nomRue="v0" destination="3" vitesse="43" longueur="18679"/>
+<TronconSortant nomRue="h2" destination="7" vitesse="45" longueur="12049"/>
+</Noeud>
+<Noeud x="175" y="619" id="3">
+<TronconSortant nomRue="v0" destination="2" vitesse="48" longueur="18679"/>
+<TronconSortant nomRue="v0" destination="4" vitesse="43" longueur="7645"/>
+<TronconSortant nomRue="h3" destination="8" vitesse="45" longueur="7431"/>
+</Noeud>
+<Noeud x="197" y="712" id="4">
+<TronconSortant nomRue="v0" destination="3" vitesse="45" longueur="7645"/>
+<TronconSortant nomRue="h4" destination="9" vitesse="40" longueur="4565"/>
+</Noeud>
+<Noeud x="360" y="207" id="5">
+<TronconSortant nomRue="h0" destination="0" vitesse="41" longueur="14268"/>
+<TronconSortant nomRue="v1" destination="6" vitesse="41" longueur="12847"/>
+<TronconSortant nomRue="h0" destination="10" vitesse="43" longueur="12420"/>
+</Noeud>
+<Noeud x="250" y="324" id="6">
+<TronconSortant nomRue="v1" destination="5" vitesse="46" longueur="12847"/>
+<TronconSortant nomRue="h1" destination="1" vitesse="41" longueur="10560"/>
+<TronconSortant nomRue="v1" destination="7" vitesse="42" longueur="7859"/>
+<TronconSortant nomRue="h1" destination="11" vitesse="48" longueur="18483"/>
+</Noeud>
+<Noeud x="243" y="422" id="7">
+<TronconSortant nomRue="v1" destination="6" vitesse="43" longueur="7859"/>
+<TronconSortant nomRue="h2" destination="2" vitesse="45" longueur="12049"/>
+<TronconSortant nomRue="v1" destination="8" vitesse="40" longueur="17687"/>
+<TronconSortant nomRue="h2" destination="12" vitesse="41" longueur="16176"/>
+</Noeud>
+<Noeud x="265" y="642" id="8">
+<TronconSortant nomRue="v1" destination="7" vitesse="48" longueur="17687"/>
+<TronconSortant nomRue="h3" destination="3" vitesse="43" longueur="7431"/>
+<TronconSortant nomRue="v1" destination="9" vitesse="41" longueur="6550"/>
+<TronconSortant nomRue="h3" destination="13" vitesse="45" longueur="14887"/>
+</Noeud>
+<Noeud x="253" y="723" id="9">
+<TronconSortant nomRue="v1" destination="8" vitesse="43" longueur="6550"/>
+<TronconSortant nomRue="h4" destination="4" vitesse="46" longueur="4565"/>
+<TronconSortant nomRue="h4" destination="14" vitesse="47" longueur="18217"/>
+</Noeud>
+<Noeud x="515" y="216" id="10">
+<TronconSortant nomRue="h0" destination="5" vitesse="43" longueur="12420"/>
+<TronconSortant nomRue="v2" destination="11" vitesse="48" longueur="5724"/>
+<TronconSortant nomRue="h0" destination="15" vitesse="41" longueur="10893"/>
+</Noeud>
+<Noeud x="476" y="276" id="11">
+<TronconSortant nomRue="v2" destination="10" vitesse="41" longueur="5724"/>
+<TronconSortant nomRue="h1" destination="6" vitesse="47" longueur="18483"/>
+<TronconSortant nomRue="v2" destination="12" vitesse="48" longueur="10244"/>
+<TronconSortant nomRue="h1" destination="16" vitesse="45" longueur="10526"/>
+</Noeud>
+<Noeud x="444" y="400" id="12">
+<TronconSortant nomRue="v2" destination="11" vitesse="47" longueur="10244"/>
+<TronconSortant nomRue="h2" destination="7" vitesse="45" longueur="16176"/>
+<TronconSortant nomRue="v2" destination="13" vitesse="44" longueur="18888"/>
+<TronconSortant nomRue="h2" destination="17" vitesse="48" longueur="14240"/>
+</Noeud>
+<Noeud x="451" y="636" id="13">
+<TronconSortant nomRue="v2" destination="12" vitesse="43" longueur="18888"/>
+<TronconSortant nomRue="h3" destination="8" vitesse="46" longueur="14887"/>
+<TronconSortant nomRue="v2" destination="14" vitesse="43" longueur="8714"/>
+<TronconSortant nomRue="h3" destination="18" vitesse="46" longueur="16807"/>
+</Noeud>
+<Noeud x="480" y="741" id="14">
+<TronconSortant nomRue="v2" destination="13" vitesse="48" longueur="8714"/>
+<TronconSortant nomRue="h4" destination="9" vitesse="48" longueur="18217"/>
+<TronconSortant nomRue="h4" destination="19" vitesse="48" longueur="9640"/>
+</Noeud>
+<Noeud x="569" y="91" id="15">
+<TronconSortant nomRue="h0" destination="10" vitesse="43" longueur="10893"/>
+<TronconSortant nomRue="v3" destination="16" vitesse="44" longueur="18487"/>
+<TronconSortant nomRue="h0" destination="20" vitesse="42" longueur="15583"/>
+</Noeud>
+<Noeud x="600" y="320" id="16">
+<TronconSortant nomRue="v3" destination="15" vitesse="41" longueur="18487"/>
+<TronconSortant nomRue="h1" destination="11" vitesse="44" longueur="10526"/>
+<TronconSortant nomRue="v3" destination="17" vitesse="43" longueur="6637"/>
+<TronconSortant nomRue="h1" destination="21" vitesse="49" longueur="8663"/>
+</Noeud>
+<Noeud x="622" y="400" id="17">
+<TronconSortant nomRue="v3" destination="16" vitesse="46" longueur="6637"/>
+<TronconSortant nomRue="h2" destination="12" vitesse="46" longueur="14240"/>
+<TronconSortant nomRue="v3" destination="18" vitesse="49" longueur="12365"/>
+<TronconSortant nomRue="h2" destination="22" vitesse="44" longueur="15962"/>
+</Noeud>
+<Noeud x="644" y="553" id="18">
+<TronconSortant nomRue="v3" destination="17" vitesse="41" longueur="12365"/>
+<TronconSortant nomRue="h3" destination="13" vitesse="44" longueur="16807"/>
+<TronconSortant nomRue="v3" destination="19" vitesse="43" longueur="14590"/>
+<TronconSortant nomRue="h3" destination="23" vitesse="40" longueur="6452"/>
+</Noeud>
+<Noeud x="600" y="730" id="19">
+<TronconSortant nomRue="v3" destination="18" vitesse="49" longueur="14590"/>
+<TronconSortant nomRue="h4" destination="14" vitesse="42" longueur="9640"/>
+<TronconSortant nomRue="h4" destination="24" vitesse="48" longueur="13954"/>
+</Noeud>
+<Noeud x="754" y="152" id="20">
+<TronconSortant nomRue="h0" destination="15" vitesse="45" longueur="15583"/>
+<TronconSortant nomRue="v4" destination="21" vitesse="41" longueur="13318"/>
+</Noeud>
+<Noeud x="708" y="312" id="21">
+<TronconSortant nomRue="v4" destination="20" vitesse="42" longueur="13318"/>
+<TronconSortant nomRue="h1" destination="16" vitesse="42" longueur="8663"/>
+<TronconSortant nomRue="v4" destination="22" vitesse="47" longueur="16242"/>
+</Noeud>
+<Noeud x="798" y="494" id="22">
+<TronconSortant nomRue="v4" destination="21" vitesse="46" longueur="16242"/>
+<TronconSortant nomRue="h2" destination="17" vitesse="41" longueur="15962"/>
+<TronconSortant nomRue="v4" destination="23" vitesse="48" longueur="12322"/>
+</Noeud>
+<Noeud x="699" y="612" id="23">
+<TronconSortant nomRue="v4" destination="22" vitesse="41" longueur="12322"/>
+<TronconSortant nomRue="h3" destination="18" vitesse="43" longueur="6452"/>
+<TronconSortant nomRue="v4" destination="24" vitesse="42" longueur="13130"/>
+</Noeud>
+<Noeud x="772" y="759" id="24">
+<TronconSortant nomRue="v4" destination="23" vitesse="47" longueur="13130"/>
+<TronconSortant nomRue="h4" destination="19" vitesse="47" longueur="13954"/>
+</Noeud>
+</Noeuds>
+</Reseau>

@@ -12,10 +12,10 @@ public class Chemin {
    
    private PointItineraire destination;
    private PointItineraire depart;
-   private ArrayList<Section> troncons;
+   private ArrayList<Troncon> troncons;
    
    
-	public Chemin(PointItineraire depart, PointItineraire destination, ArrayList<Section> troncons, int duree) {
+	public Chemin(PointItineraire depart, PointItineraire destination, ArrayList<Troncon> troncons, int duree) {
 		this.depart = depart;
 		this.destination = destination;
 		this.troncons = troncons;
@@ -50,7 +50,7 @@ public class Chemin {
 	 * 
 	 * @return The order list of sections constituting the pathway
 	 */
-	public ArrayList<Section> getTroncons(){
+	public ArrayList<Troncon> getTroncons(){
 		return troncons;
 	}
 }

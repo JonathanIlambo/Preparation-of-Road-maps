@@ -27,7 +27,7 @@ public class FenetrePrincipale extends JFrame{
 	// The contents of the window
 	private JPanel content;
 	// Pathway of the file xml containing time slots. Attention, not managed errors
-	protected static final String cheminFicPH="../files/plagesHoraires.xml";
+	protected static final String cheminFicPH="files/plagesHoraires.xml";
 	
 	/**
 	 * Builder of the window: launch the application
@@ -78,6 +78,4 @@ public class FenetrePrincipale extends JFrame{
 	    content = new FenetreGenerationFdR(unModele);
 	    this.setContentPane(content);
 	    }
-
-
 }

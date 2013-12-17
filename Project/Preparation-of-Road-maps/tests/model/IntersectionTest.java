@@ -15,7 +15,7 @@ public class IntersectionTest {
 	@SuppressWarnings("static-access")
 	@Test
 	public void testGenererIntersection() {
-		Map<Section,Integer> tronconIdDestination = new HashMap<Section,Integer>();
+		Map<Troncon,Integer> tronconIdDestination = new HashMap<Troncon,Integer>();
 		ZoneGeo zoneGeo = new ZoneGeo(); 
 		String chemin = "files/test/plan1.xml";
 		File file = new File(chemin);

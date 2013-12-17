@@ -24,7 +24,7 @@ public class ZoneGeo {
 	/** Attribute */  
 	private int id; 
 	private ArrayList<Intersection> intersections;
-	private ArrayList<Section> lstTroncons; 
+	private ArrayList<Troncon> lstTroncons; 
 	private Entrepot entrepot;
 	private int[][] distances; 
 	
@@ -40,7 +40,7 @@ public class ZoneGeo {
 	
 	public ZoneGeo() {
 		intersections = new ArrayList<Intersection>();
-		lstTroncons = new ArrayList<Section>();
+		lstTroncons = new ArrayList<Troncon>();
 		lstDestination = new ArrayList<Integer>(); 
 	}
 
@@ -130,7 +130,7 @@ public class ZoneGeo {
 		if ( ouvertureFichier() == AbstractModel.OK )
 		{
 			String info =""; 
-			Map<Section,Integer> tronconIdDestination = new HashMap<Section, Integer>();
+			Map<Troncon,Integer> tronconIdDestination = new HashMap<Troncon, Integer>();
 			
 			String tag = "Reseau"; 
 			
@@ -398,13 +398,13 @@ public class ZoneGeo {
 		}		
 	}
 	
-	public Section getTroncon(int depart, int arrivee)
+	public Troncon getTroncon(int depart, int arrivee)
 	{
 		for(int i=0; i<intersections.size(); i++)
 		{
 			if(intersections.get(i).getId() == depart)
 			{
-				ArrayList<Section> troncons = intersections.get(i).getTronconSortant();
+				ArrayList<Troncon> troncons = intersections.get(i).getTronconSortant();
 				for(int j=0; j<troncons.size(); j++){
 					if(troncons.get(j).getDestination().getId() == arrivee){
 						return troncons.get(j);

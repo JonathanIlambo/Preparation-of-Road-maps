@@ -20,7 +20,7 @@ public class Intersection extends Observable {
 	private int id; 
 	private int x;
 	private int y;
-	private ArrayList<Section> tronconSortant;
+	private ArrayList<Troncon> tronconSortant;
 	private ZoneGeo zoneGeo;
 	private Integer etat;
 	private Boolean respectPlageHoraire; 
@@ -79,14 +79,14 @@ public class Intersection extends Observable {
 	 * 
 	 * @return la liste des troncons ayant cette intersection pour point de depart
 	 */
-	public ArrayList<Section> getTronconSortant() {
+	public ArrayList<Troncon> getTronconSortant() {
 		return tronconSortant;
 	}
 	/**
 	 * Affecte la liste des troncons ayant cette intersection pour point de depart
 	 * @param tronconSortant
 	 */
-	public void setTronconSortant(ArrayList<Section> tronconSortant) {
+	public void setTronconSortant(ArrayList<Troncon> tronconSortant) {
 		this.tronconSortant = tronconSortant;
 	}
 	/**
@@ -147,7 +147,7 @@ public class Intersection extends Observable {
 	 * @param tronconIdDestination troncons ayant pour point de depart l'intersection
 	 * @return
 	 */
-	public int genererIntersection (Element intersectionElement, Map<Section,Integer> tronconIdDestination)
+	public int genererIntersection (Element intersectionElement, Map<Troncon,Integer> tronconIdDestination)
 	{
 		String tag = "TronconSortant";
 		
@@ -183,12 +183,12 @@ public class Intersection extends Observable {
 	    		return AbstractModel.PARSER_ERROR_INTERSECTION;
 	    	}
 	    	
-	    	tronconSortant = new ArrayList<Section>(); 
+	    	tronconSortant = new ArrayList<Troncon>(); 
 	    	
 	    	for (int i=0 ; i<tronconsSortants.getLength() ; i++)
 	    	{
 	    		Element tronconElement = (Element) tronconsSortants.item(i);
-	    		Section troncon = new Section();
+	    		Troncon troncon = new Troncon();
 	    		troncon.setDepart(this); 
 	    		
 	    		int idDestination = 0; 

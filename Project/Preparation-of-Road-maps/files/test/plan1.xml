@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Reseau>
+<Entrepot id="0"/>
+<Noeuds>
+<Noeud x="213" y="106" id="0">
+<TronconSortant nomRue="v0" destination="0" vitesse="46" longueur="16888"/>
+<TronconSortant nomRue="h0" destination="0" vitesse="42" longueur="14268"/>
+</Noeud>
+</Noeuds>
+</Reseau>

@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Jonathan Ilambo
  */
-public class SectionTest {
+public class TronconTest {
     
-    public SectionTest() {
+    public TronconTest() {
     }
     
     @BeforeClass

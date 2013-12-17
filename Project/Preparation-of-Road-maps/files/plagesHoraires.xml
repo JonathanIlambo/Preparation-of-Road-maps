@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Reseau>
+<plageshoraires>
+<plagehoraire debutHeure="9" debutMinute="0" finHeure="10" finMinute="0"/>
+<plagehoraire debutHeure="10" debutMinute="0" finHeure="11" finMinute="0"/>
+<plagehoraire debutHeure="11" debutMinute="0" finHeure="12" finMinute="30"/>
+</plageshoraires>
+</Reseau>

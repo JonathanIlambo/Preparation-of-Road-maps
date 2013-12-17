@@ -300,7 +300,7 @@ public class FeuilleDeRoute extends AbstractModel {
 				graph_cost[pointFocused.getId()][pointsDestination.get(k).getId()] = dureeSecondes;
 				ArrayList<Integer> listeIntersections = chemins.get(k).get(0);
 				
-				ArrayList<Section> troncons = new ArrayList<Section>();
+				ArrayList<Troncon> troncons = new ArrayList<Troncon>();
 				for(int l=0; l<listeIntersections.size()-1; l++)
 				{
 					troncons.add(zoneGeo.getTroncon(listeIntersections.get(l), listeIntersections.get(l+1)));
@@ -693,7 +693,7 @@ public class FeuilleDeRoute extends AbstractModel {
 	   int dureeSecondes = chemins.get(0).get(1).get(0);
 	   ArrayList<Integer> listeIntersections = chemins.get(0).get(0);
 
-	   ArrayList<Section> troncons = new ArrayList<Section>();
+	   ArrayList<Troncon> troncons = new ArrayList<Troncon>();
 	   for(int l=0; l<listeIntersections.size()-1; l++)
 	   {
 		   troncons.add(zoneGeo.getTroncon(listeIntersections.get(l), listeIntersections.get(l+1)));
